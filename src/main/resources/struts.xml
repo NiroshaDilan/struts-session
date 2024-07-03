@@ -1,0 +1,26 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="default" extends="struts-default">
+        <action name="enterWorkflow" class="lk.icoder.actions.EnterWorkflowAction">
+            <result name="redirect" type="redirectAction">
+                <param name="actionName">respondentActivityResponse</param>
+                <param name="cngSessionId">${cngSessionId}</param>
+            </result>
+        </action>
+
+        <action name="respondentActivityResponse" class="lk.icoder.actions.RespondentActivityResponseAction">
+            <result>/workflowPage1.jsp</result>
+        </action>
+
+        <action name="continueWorkflow" class="lk.icoder.actions.ContinueWorkflowAction">
+            <result>/workflowPage2.jsp</result>
+        </action>
+
+        <action name="continueFromPage2" class="lk.icoder.actions.ContinueFormPage2Action">
+            <result>/workflowPage3.jsp</result>
+        </action>
+    </package>
+</struts>
