@@ -1,6 +1,10 @@
 package lk.icoder.model;
 
-public class WorkflowSession {
+import java.io.Serializable;
+
+public class WorkflowSession implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private String cngSessionId;
     private String customMessage;

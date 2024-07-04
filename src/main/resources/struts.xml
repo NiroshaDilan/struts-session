@@ -4,6 +4,14 @@
 
 <struts>
     <package name="default" extends="struts-default">
+<!--        <interceptors>-->
+<!--            <interceptor name="spring" class="org.apache.struts2.spring.StrutsSpringInterceptor"/>-->
+<!--            <interceptor-stack name="defaultStack">-->
+<!--                <interceptor-ref name="spring"/>-->
+<!--                <interceptor-ref name="defaultStack"/>-->
+<!--            </interceptor-stack>-->
+<!--        </interceptors>-->
+
         <action name="enterWorkflow" class="lk.icoder.actions.EnterWorkflowAction">
             <result name="redirect" type="redirectAction">
                 <param name="actionName">respondentActivityResponse</param>
